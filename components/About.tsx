@@ -106,7 +106,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-black gradient-text-animated mb-4">About Me</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black gradient-text-animated mb-4">About Me</h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 rounded-full mx-auto" />
         </motion.div>
 
@@ -119,35 +119,35 @@ const About = () => {
             transition={{ duration: 0.7 }}
             className="space-y-6"
           >
-            <div className="bg-white rounded-3xl p-10 shadow-2xl border-2 border-gray-100 hover:border-yellow-300 transition-all duration-300 relative overflow-hidden" style={{ boxShadow: '0 20px 60px rgba(0, 0, 0, 0.12)', transformStyle: 'preserve-3d' }}>
+            <div className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl border-2 border-gray-100 hover:border-yellow-300 transition-all duration-300 relative overflow-hidden" style={{ boxShadow: '0 20px 60px rgba(0, 0, 0, 0.12)', transformStyle: 'preserve-3d' }}>
               {/* 3D Layered Background */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-yellow-100 to-amber-100 rounded-full filter blur-3xl opacity-40 -mr-32 -mt-32" style={{ transform: 'translateZ(-30px)' }}></div>
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-full filter blur-3xl opacity-30 -ml-24 -mb-24" style={{ transform: 'translateZ(-20px)' }}></div>
               
               <div className="relative z-10">
-              <h3 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                <span className="text-4xl">👋</span>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+                <span className="text-3xl sm:text-4xl">👋</span>
                 My Journey
               </h3>
               
               <div className="space-y-4 text-gray-700 leading-relaxed">
-                <p className="text-lg">
+                <p className="text-base sm:text-lg">
                   Hey there! I'm <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-orange-600">Rakesh Kumar Singh</span>, 
                   a passionate developer currently pursuing my degree in Computer Science.
                 </p>
                 
-                <p className="text-lg">
+                <p className="text-base sm:text-lg">
                   I'm deeply fascinated by how technology can transform ideas into reality. Whether it's crafting beautiful web interfaces, 
                   diving into the world of artificial intelligence, or building mobile apps that solve real problems—I love it all!
                 </p>
                 
-                <p className="text-lg">
+                <p className="text-base sm:text-lg">
                   My journey in tech started with curiosity and evolved into a passion. I believe in continuous learning, 
                   experimenting with new technologies, and pushing boundaries to create something meaningful.
                 </p>
 
-                <div className="bg-gradient-to-r from-yellow-50 to-amber-50 rounded-xl p-6 border-l-4 border-yellow-400 mt-6">
-                  <p className="text-lg font-semibold text-gray-800 mb-2">My Mindset</p>
+                <div className="bg-gradient-to-r from-yellow-50 to-amber-50 rounded-xl p-4 sm:p-6 border-l-4 border-yellow-400 mt-6">
+                  <p className="text-base sm:text-lg font-semibold text-gray-800 mb-2">My Mindset</p>
                   <p className="text-gray-700 italic">
                     "Code is poetry, and every project is a canvas to paint innovation. I don't just build applications; 
                     I create experiences that matter."

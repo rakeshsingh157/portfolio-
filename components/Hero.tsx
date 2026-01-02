@@ -26,7 +26,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-[#f5f3ef] via-[#f9f7f3] to-[#fef9f0]">
+    <section id="home" className="relative min-h-screen pt-20 sm:pt-24 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-br from-[#f5f3ef] via-[#f9f7f3] to-[#fef9f0]">
       {/* 3D Perspective Grid - Same as Skills Section */}
       <div className="absolute inset-0 -z-10 opacity-15">
         <div className="absolute inset-0" style={{
@@ -127,8 +127,8 @@ const Hero = () => {
               R
             </motion.div>
             <div>
-              <div className="text-2xl font-bold gradient-text-animated">Rakesh Kumar Singh</div>
-              <div className="text-sm text-gray-600">Creative Coder</div>
+              <div className="text-xl sm:text-2xl font-bold gradient-text-animated">Rakesh Kumar Singh</div>
+              <div className="text-xs sm:text-sm text-gray-600">Creative Coder</div>
             </div>
           </motion.div>
 
@@ -141,7 +141,7 @@ const Hero = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5, rotateY: 10 }}
-                className="bg-white rounded-2xl px-8 py-5 flex items-center gap-4 cursor-pointer hover:shadow-2xl transition-all border-2 border-gray-100 shadow-lg relative overflow-hidden group"
+                className="bg-white rounded-2xl px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 flex items-center gap-3 sm:gap-4 cursor-pointer hover:shadow-2xl transition-all border-2 border-gray-100 shadow-lg relative overflow-hidden group"
                 style={{
                   boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08)',
                   transformStyle: 'preserve-3d',
@@ -169,7 +169,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
             whileHover={{ scale: 1.02, rotateY: 5 }}
-            className="bg-white rounded-3xl p-10 relative overflow-hidden border-2 border-gray-100 shadow-2xl"
+            className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 relative overflow-hidden border-2 border-gray-100 shadow-2xl"
             style={{
               boxShadow: '0 20px 60px rgba(0, 0, 0, 0.12)',
               transformStyle: 'preserve-3d',
@@ -197,7 +197,7 @@ const Hero = () => {
               {/* Profile Image with Animation */}
               <motion.div
                 whileHover={{ scale: 1.05, rotate: 5 }}
-                className="w-48 h-48 bg-gray-900 rounded-3xl mb-6 relative overflow-hidden group shadow-2xl border-4 border-white"
+                className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-gray-900 rounded-3xl mb-6 relative overflow-hidden group shadow-2xl border-4 border-white mx-auto lg:mx-0"
               >
                 <Image
                   src="/profile.jpg"
@@ -214,7 +214,7 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="text-5xl font-bold mb-3"
+                  className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3"
                 >
                   <span className="gradient-text-animated">Rakesh Kumar Singh</span>
                 </motion.h1>
@@ -222,7 +222,7 @@ const Hero = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
-                  className="text-gray-600 text-lg font-medium"
+                  className="text-gray-600 text-base sm:text-lg font-medium"
                 >
                   Full Stack Developer and Creative Coder
                 </motion.p>
@@ -296,7 +296,7 @@ const Hero = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
-              className="bg-white rounded-3xl p-8 border-2 border-gray-100 shadow-2xl"
+              className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-gray-100 shadow-2xl"
               style={{ boxShadow: '0 12px 48px rgba(0, 0, 0, 0.1)' }}
             >
               <div className="flex items-center justify-between mb-6">
@@ -307,14 +307,14 @@ const Hero = () => {
               <div className="space-y-6">
                 {/* Normal Time Display */}
                 <div className="text-center">
-                  <div className="text-5xl font-bold gradient-text mb-2">
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-2">
                     {time ? time.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) : '--:--:--'}
                   </div>
-                  <div className="text-sm text-gray-500">Digital Time</div>
+                  <div className="text-xs sm:text-sm text-gray-500">Digital Time</div>
                 </div>
 
                 {/* Binary Time Display */}
-                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6">
+                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-4 sm:p-6">
                   <div className="text-xs text-gray-500 text-center mb-3 font-semibold">BINARY REPRESENTATION</div>
                   <div className="grid grid-cols-3 gap-4">
                     {/* Hours */}

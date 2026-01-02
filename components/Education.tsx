@@ -142,8 +142,8 @@ const Education = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-black gradient-text-animated mb-4">Education</h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black gradient-text-animated mb-4">Education</h2>
+          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
             My academic journey and learning milestones
           </p>
           <div className="w-24 h-1.5 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500 rounded-full mx-auto mt-4" />

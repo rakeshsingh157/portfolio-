@@ -145,7 +145,7 @@ const Contact = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-6xl font-black mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6"
           >
             <span className="gradient-text-animated">Get In Touch</span>
           </motion.h2>
@@ -153,7 +153,7 @@ const Contact = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-gray-600 text-lg max-w-2xl mx-auto mb-4"
+            className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto mb-4"
           >
             Have a project in mind? Let's work together to create something amazing!
           </motion.p>
@@ -319,7 +319,7 @@ const Contact = () => {
                 whileHover={{ scale: 1.1, y: -8, rotateY: 5 }}
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                className="bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl p-6 text-center shadow-xl relative overflow-hidden group" 
+                className="bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl p-4 sm:p-6 text-center shadow-xl relative overflow-hidden group" 
                 style={{ 
                   boxShadow: '0 12px 32px rgba(251, 191, 36, 0.3)',
                   transformStyle: 'preserve-3d'
@@ -331,7 +331,7 @@ const Contact = () => {
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.4, type: "spring" }}
-                  className="text-5xl font-black text-white mb-2 relative z-10" 
+                  className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-2 relative z-10" 
                   style={{ transform: 'translateZ(10px)' }}
                 >
                   24/7

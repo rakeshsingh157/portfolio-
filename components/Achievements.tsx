@@ -66,7 +66,7 @@ const Achievements = () => {
   ];
 
   return (
-    <section id="achievements" className="relative min-h-screen py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#f5f3ef] to-[#fef9f0] overflow-hidden">
+    <section id="achievements" className="relative min-h-screen py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#f5f3ef] to-[#fef9f0] overflow-hidden">
       {/* 3D Perspective Grid */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
