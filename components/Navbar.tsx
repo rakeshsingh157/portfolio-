@@ -9,6 +9,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,13 +26,30 @@ const Navbar = () => {
       }
       
       setLastScrollY(currentScrollY);
+
+      // Active section detection
+      const sections = ['home', 'about', 'skills', 'projects', 'achievements', 'education', 'contact'];
+      const scrollPosition = currentScrollY + 200;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetBottom = offsetTop + element.offsetHeight;
+
+          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
     
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
-  const menuItems = ['Home', 'Skills', 'Projects', 'Contact'];
+  const menuItems = ['Home', 'About', 'Skills', 'Projects', 'Achievements', 'Education', 'Contact'];
 
   return (
     <motion.nav
@@ -82,14 +100,24 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -2 }}
-                className="relative px-6 py-3 text-base font-semibold text-gray-700 transition-all group"
+                className={`relative px-6 py-3 text-base font-semibold transition-all group ${
+                  activeSection === item.toLowerCase() 
+                    ? 'text-gray-900' 
+                    : 'text-gray-700'
+                }`}
               >
                 <span className="relative z-10 group-hover:text-gray-900">{item}</span>
                 <motion.div
-                  className="absolute inset-0 bg-yellow-400/0 group-hover:bg-yellow-400/10 rounded-lg transition-all"
+                  className={`absolute inset-0 rounded-lg transition-all ${
+                    activeSection === item.toLowerCase()
+                      ? 'bg-yellow-400/20'
+                      : 'bg-yellow-400/0 group-hover:bg-yellow-400/10'
+                  }`}
                   whileHover={{ scale: 1.05 }}
                 />
-                <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-1 bg-yellow-400 group-hover:w-8 transition-all duration-300 rounded-full"></span>
+                <span className={`absolute bottom-2 left-1/2 -translate-x-1/2 h-1 bg-yellow-400 transition-all duration-300 rounded-full ${
+                  activeSection === item.toLowerCase() ? 'w-8' : 'w-0 group-hover:w-8'
+                }`}></span>
               </motion.a>
             ))}
             

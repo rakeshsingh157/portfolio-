@@ -191,8 +191,7 @@ const Skills = () => {
             >
               {/* Multi-Layer 3D Animated Background */}
               <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-15 transition-all duration-500`} style={{ transform: 'translateZ(-10px)' }}></div>
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-yellow-400/20 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700" style={{ transform: 'translateZ(-5px)' }}></div>
-              <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-tr from-amber-400/15 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700" style={{ transform: 'translateZ(-5px)' }}></div>
+
               
               {/* 3D Geometric Accent */}
               <div className="absolute top-4 right-4 w-16 h-16 border-2 border-yellow-400/0 group-hover:border-yellow-400/20 rounded-xl transition-all duration-500" style={{ transform: 'translateZ(20px) rotateZ(45deg)' }}></div>

@@ -335,8 +335,8 @@ const Projects = () => {
                   <div>
                     <motion.div
                       className="text-white mb-3"
-                      whileHover={{ rotate: 360, scale: 1.2 }}
-                      transition={{ duration: 0.5 }}
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 0.3 }}
                     >
                       {project.icon}
                     </motion.div>
